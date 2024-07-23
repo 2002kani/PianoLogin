@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(0,46,87,1) 8%, rgba(0,24,47,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.überschrift {
+    margin-bottom: 40px;
+    color: rgb(243, 243, 243);
+}
+
+.überschrift span{
+    color: #7d76e1;
+}
+
+.benutzer-section, .passwort-section {
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.benutzer-section label, .passwort-section label{
+    font-weight: 500;
+    color: #fff;
+    margin-left: 12px;
+}
+
+.benutzer-section input, .passwort-section input {
+    align-items: center;
+    padding: 0.25em 0.5em;
+    margin: 10px;
+    width: 700px;
+    height: 35px;
+    border: 1px solid rgb(95, 95, 95);
+    border-radius: 5px;
+    background-color: rgb(244, 240, 235);
+}
+
+.piano-container {
+    margin-top: 20px;
+    width: 780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.piano-container.show {
+    display: block;
+    opacity: 1;
+    animation: slideIn 0.5s forwards;
+}
+
+.piano-keys {
+    display: flex;
+}
+
+.piano-keys .key {
+    list-style: none;
+    user-select: none;
+    color: #a2a2a2;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.piano-keys .black {
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px;
+    z-index: 2;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333 96%, #232323 4%);
+}
+
+.piano-keys .black.active {
+    box-shadow: inset -5px 5px 20px rgba(300, 300, 300, 0.2);
+    background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piano-keys .white {
+    width: 70px;
+    height: 230px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #e2e1e1 4%);
+}
+
+.piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+.piano-keys span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 1.13rem;
+    text-align: center;
+    display: none;
+}
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button {
+    margin: 15px;
+    width: 700px;
+    background: #7d76e1;
+    border: 1px solid #7d76e1;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    }
+
+.button:hover,
+.button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #fff;
+}
+
+.button:active {
+    opacity: .5;
+}
