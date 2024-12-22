@@ -50,7 +50,7 @@ document.addEventListener("click", function(e){   // Keyboard wird wenn man woan
 });
 
 button.addEventListener("click", function(e){
-    e.preventDefault();
+    e.preventDefault(); 
 
     const username = document.querySelector(".benutzer-section input")
     const passwort = passwordInput.value;
